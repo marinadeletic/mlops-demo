@@ -31,8 +31,8 @@ from typing import NamedTuple
 from helper_components import retrieve_best_run, evaluate_model
     
 # Defaults and environment settings
-BASE_IMAGE = 'gcr.io/marinastestproject/base_image:latest' #os.getenv("BASE_IMAGE")
-TRAINER_IMAGE = 'gcr.io/marinastestproject/trainer_image:latest' #os.getenv("TRAINER_IMAGE")
+BASE_IMAGE = 'gcr.io/automlkfp/base_image:latest' #os.getenv("BASE_IMAGE")
+TRAINER_IMAGE = 'gcr.io/automlkfp/trainer_image:latest' #os.getenv("TRAINER_IMAGE")
 RUNTIME_VERSION = '1.14' #os.getenv("RUNTIME_VERSION")
 PYTHON_VERSION = '3.5' #os.getenv("PYTHON_VERSION")
 COMPONENT_URL_SEARCH_PREFIX = 'https://raw.githubusercontent.com/kubeflow/pipelines/0.1.36/components/gcp/'#os.getenv("COMPONENT_URL_SEARCH_PREFIX")
