@@ -1,0 +1,1 @@
+FROM gcr.io/automlkfp/mlops-dev:TF115-TFX015-KFP136
