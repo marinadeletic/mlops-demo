@@ -10,4 +10,4 @@ substitutions:
     _RUNTIME_VERSION: 1.14
     _PYTHON_VERSION: 3.5
     _COMPONENT_URL_SEARCH_PREFIX: https://raw.githubusercontent.com/kubeflow/pipelines/0.1.36/components/gcp/
-filename: 02_demo_CICD/cloudbild.yaml
+filename: 02_demo_CICD/cloudbuild.yaml
