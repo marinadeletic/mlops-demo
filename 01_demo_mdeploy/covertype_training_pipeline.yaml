@@ -900,17 +900,17 @@
 
           return (metric_name, metric_value, json.dumps(metrics))
 
-        def _serialize_str(str_value: str) -> str:
-            if not isinstance(str_value, str):
-                raise TypeError('Value "{}" has type "{}" instead of str.'.format(str(str_value), str(type(str_value))))
-            return str_value
-
         def _serialize_float(float_value: float) -> str:
             if isinstance(float_value, str):
                 return float_value
             if not isinstance(float_value, (float, int)):
                 raise TypeError('Value "{}" has type "{}" instead of float.'.format(str(float_value), str(type(float_value))))
             return str(float_value)
+
+        def _serialize_str(str_value: str) -> str:
+            if not isinstance(str_value, str):
+                raise TypeError('Value "{}" has type "{}" instead of str.'.format(str(str_value), str(type(str_value))))
+            return str_value
 
         import argparse
         _parser = argparse.ArgumentParser(prog='Evaluate model', description='Evaluates a trained sklearn model.\n')
@@ -951,7 +951,7 @@
         "value": |-
           /secret/gcp-credentials/user-gcp-sa.json
       "image": |-
-        gcr.io/demokfp/base_image:latest
+        gcr.io/marinas-demo/base_image:latest
       "volumeMounts":
       - "mountPath": |-
           /secret/gcp-credentials
@@ -1056,19 +1056,19 @@
 
           return (metric_value, alpha, max_iter)
 
-        def _serialize_int(int_value: int) -> str:
-            if isinstance(int_value, str):
-                return int_value
-            if not isinstance(int_value, int):
-                raise TypeError('Value "{}" has type "{}" instead of int.'.format(str(int_value), str(type(int_value))))
-            return str(int_value)
-
         def _serialize_float(float_value: float) -> str:
             if isinstance(float_value, str):
                 return float_value
             if not isinstance(float_value, (float, int)):
                 raise TypeError('Value "{}" has type "{}" instead of float.'.format(str(float_value), str(type(float_value))))
             return str(float_value)
+
+        def _serialize_int(int_value: int) -> str:
+            if isinstance(int_value, str):
+                return int_value
+            if not isinstance(int_value, int):
+                raise TypeError('Value "{}" has type "{}" instead of int.'.format(str(int_value), str(type(int_value))))
+            return str(int_value)
 
         import argparse
         _parser = argparse.ArgumentParser(prog='Retrieve best run', description='Retrieves the parameters of the best Hypertune run.\n')
@@ -1108,7 +1108,7 @@
         "value": |-
           /secret/gcp-credentials/user-gcp-sa.json
       "image": |-
-        gcr.io/demokfp/base_image:latest
+        gcr.io/marinas-demo/base_image:latest
       "volumeMounts":
       - "mountPath": |-
           /secret/gcp-credentials
@@ -1194,7 +1194,7 @@
       - |-
         --master_image_uri
       - |-
-        gcr.io/demokfp/trainer_image:latest
+        gcr.io/marinas-demo/trainer_image:latest
       - |-
         --worker_image_uri
       - ""
@@ -1328,7 +1328,7 @@
       - |-
         --master_image_uri
       - |-
-        gcr.io/demokfp/trainer_image:latest
+        gcr.io/marinas-demo/trainer_image:latest
       - |-
         --worker_image_uri
       - ""

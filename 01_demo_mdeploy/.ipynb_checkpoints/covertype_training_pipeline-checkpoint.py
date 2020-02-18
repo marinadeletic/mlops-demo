@@ -28,13 +28,13 @@ from kfp.dsl.types import String
 from kfp.gcp import use_gcp_secret
 
 # Defaults and environment settings
-BASE_IMAGE = 'gcr.io/demokfp/base_image:latest' #os.getenv("BASE_IMAGE")
-TRAINER_IMAGE = 'gcr.io/demokfp/trainer_image:latest' #os.getenv("TRAINER_IMAGE")
-RUNTIME_VERSION = '1.14' #os.getenv("RUNTIME_VERSION")
-PYTHON_VERSION = '3.5' #os.getenv("PYTHON_VERSION")
-COMPONENT_URL_SEARCH_PREFIX = 'https://raw.githubusercontent.com/kubeflow/pipelines/0.1.36/components/gcp/'#os.getenv("COMPONENT_URL_SEARCH_PREFIX")
+BASE_IMAGE = os.getenv("BASE_IMAGE")
+TRAINER_IMAGE = os.getenv("TRAIN_IMAGE")
 
 
+RUNTIME_VERSION = '1.14'
+PYTHON_VERSION = '3.5'
+COMPONENT_URL_SEARCH_PREFIX = 'https://raw.githubusercontent.com/kubeflow/pipelines/0.1.36/components/gcp/'
 TRAINING_FILE_PATH = 'datasets/training/data.csv'
 VALIDATION_FILE_PATH = 'datasets/validation/data.csv'
 TESTING_FILE_PATH = 'datasets/testing/data.csv'
