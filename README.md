@@ -1,4 +1,4 @@
-# mlops-demo
+# Mlops-demo
 
 This demo illustrates the use of GCP to develop and deploy a machine learning model on GCP's AI platform using kubeflow pipelines. This demo is based off labs created by [Jarek Kazmierczak](https://github.com/jarokaz/mlops-labs) which walk through the full creation process.
 
