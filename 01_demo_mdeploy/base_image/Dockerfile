@@ -1,1 +1,1 @@
-FROM gcr.io/marinas-demo/mlops-dev:latest
+FROM gcr.io/mmlops3/mlops-dev:latest

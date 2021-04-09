@@ -951,7 +951,7 @@
         "value": |-
           /secret/gcp-credentials/user-gcp-sa.json
       "image": |-
-        gcr.io/mmlops3/base_image:latest
+        tensorflow/tensorflow:1.13.2-py3
       "volumeMounts":
       - "mountPath": |-
           /secret/gcp-credentials
@@ -1108,7 +1108,7 @@
         "value": |-
           /secret/gcp-credentials/user-gcp-sa.json
       "image": |-
-        gcr.io/mmlops3/base_image:latest
+        tensorflow/tensorflow:1.13.2-py3
       "volumeMounts":
       - "mountPath": |-
           /secret/gcp-credentials
@@ -1194,7 +1194,7 @@
       - |-
         --master_image_uri
       - |-
-        gcr.io/mmlops3/trainer_image:latest
+        None
       - |-
         --worker_image_uri
       - ""
@@ -1328,7 +1328,7 @@
       - |-
         --master_image_uri
       - |-
-        gcr.io/mmlops3/trainer_image:latest
+        None
       - |-
         --worker_image_uri
       - ""
